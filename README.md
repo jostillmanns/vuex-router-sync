@@ -28,6 +28,14 @@ You can optionally set a custom vuex module name:
 sync(store, router, { moduleName: 'RouteModule' } )
 ```
 
+Optionally you may also set a custom mutation handler:
+
+```js
+sync(store, router, { mutationHandler: () => Object.freeze({}) })
+```
+
+This would allow you to for instance mutate only specific properties
+on the route state.
 
 ### How does it work?
 
